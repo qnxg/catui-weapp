@@ -30,12 +30,12 @@
     "url": "git+https://github.com/qnxg/catui-weapp.git"
   },
   "scripts": {
-    "dev": "yarn run dev:lib",
+    "dev": "npm run dev:lib",
     "dev:lib": "tsc --project ./tsconfig.build.json --watch --incremental",
-    "build": "yarn run build:rollup && yarn run build:lib",
+    "build": "npm run build:rollup && npm run build:lib",
     "build:lib": "tsc --project ./tsconfig.build.json",
     "build:rollup": "rollup --config rollup.config.js",
-    "prepublishOnly": "yarn run clean && yarn run build",
+    "prepublishOnly": "npm run clean && npm run build",
     "clean": "rimraf .temp dist lib coverage"
   },
   "bugs": {
@@ -51,8 +51,18 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
+    "@tarojs/components": "^3.0.21",
+    "@tarojs/react": "^3.0.21",
+    "@tarojs/taro": "^3.0.21",
+    "@types/classnames": "^2.2.11",
+    "@types/react": "^17.0.0",
+    "react": "^16.10.0",
     "rollup": "^2.35.1",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-typescript2": "^0.29.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2"
   }
 }
