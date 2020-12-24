@@ -1,0 +1,13 @@
+@import '../var.scss';
+
+:host {
+  font-size: 0;
+  line-height: 1;
+}
+
+.cat-loading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $loading-spinner-color;
+}
