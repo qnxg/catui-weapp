@@ -5,7 +5,7 @@ import { addUnit } from '../../utils';
 
 import { CatLoadingProps } from '../../../types/loading';
 
-export default class CatButton extends Component<CatLoadingProps> {
+export default class CatLoading extends Component<CatLoadingProps> {
   render(): JSX.Element {
     const {
       customStyle = '',
