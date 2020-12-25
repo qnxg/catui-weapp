@@ -1,4 +1,4 @@
-import { ComponentClass } from 'react';
+import { FC } from 'react';
 import { CatComponent } from './base';
 
 export interface CatLoadingProps extends CatComponent {
@@ -33,6 +33,6 @@ export interface CatLoadingProps extends CatComponent {
   vertical?: boolean;
 }
 
-declare const CatLoading: ComponentClass<CatLoadingProps>;
+declare const CatLoading: FC<CatLoadingProps>;
 
 export default CatLoading;
