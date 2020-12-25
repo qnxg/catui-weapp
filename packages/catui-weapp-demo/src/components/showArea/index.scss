@@ -1,0 +1,22 @@
+.demo-block {
+  &__title {
+    margin: 0;
+    padding: 40px 30px 30px;
+    color: rgba(69, 90, 100, 0.6);
+    font-weight: 400;
+    font-size: 28px;
+  }
+
+  &__card {
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  &--padding {
+    padding: 0 30px;
+
+    .demo-block__title {
+      padding-left: 0;
+    }
+  }
+}
