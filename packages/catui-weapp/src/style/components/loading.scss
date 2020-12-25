@@ -1,10 +1,5 @@
 @import '../var.scss';
 
-:host {
-  font-size: 0;
-  line-height: 1;
-}
-
 @keyframes cat-rotate {
   from {
     transform: rotate(0deg);
@@ -36,7 +31,7 @@
     }
 
     &--circular {
-      border: 1px solid transparent;
+      border: 1px * $hd solid transparent;
       border-top-color: currentColor;
       border-radius: 100%;
     }
