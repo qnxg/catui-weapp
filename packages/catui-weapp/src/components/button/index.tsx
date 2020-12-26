@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, View } from '@tarojs/components';
 
 import { CatButtonProps } from '../../../types/button';
 
-export default class CatButton extends Component<CatButtonProps> {
-  render(): JSX.Element {
-    return (
-      <View>
-        <Button>gggg</Button>
-      </View>
-    );
-  }
-}
+const CatButton: React.FC<CatButtonProps> = () => {
+  return (
+    <View>
+      <Button>gggg</Button>
+    </View>
+  );
+};
+
+export default CatButton;

@@ -1,4 +1,4 @@
-import { ComponentClass } from 'react';
+import { FC } from 'react';
 import { ButtonProps } from '@tarojs/components/types/Button';
 import { CatComponent } from './base';
 
@@ -28,6 +28,6 @@ export interface CatButtonProps extends CatComponent, TaroButtonProps {
   type?: 'default' | 'primary' | 'info' | 'warning' | 'danger';
 }
 
-declare const CatButton: ComponentClass<CatButtonProps>;
+declare const CatButton: FC<CatButtonProps>;
 
 export default CatButton;
