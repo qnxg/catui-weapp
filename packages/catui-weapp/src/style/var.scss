@@ -53,3 +53,15 @@ $loading-spinner-animation-duration: 0.8s !default;
 $loading-text-color: $gray-6 !default;
 $loading-text-font-size: $font-size-md !default;
 $loading-text-line-height: 20px * $hd !default;
+
+// Info
+$info-size: 16px * $hd !default;
+$info-color: $white !default;
+$info-padding: 0 3px * $hd !default;
+$info-font-size: 12px * $hd !default;
+$info-font-weight: 500 !default;
+$info-border-width: 1px * $hd !default;
+$info-background-color: $red !default;
+$info-dot-color: $red !default;
+$info-dot-size: 8px * $hd !default;
+$info-font-family: -apple-system-font, Helvetica Neue, Arial, sans-serif !default;
