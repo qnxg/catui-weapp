@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { ComponentClass } from 'react';
 import { CommonEventFunction } from '@tarojs/components';
 import { ButtonProps } from '@tarojs/components/types/Button';
 import { CatComponent } from './base';
@@ -103,6 +103,6 @@ export interface CatButtonProps extends CatComponent, TaroButtonProps {
   onClick?: CommonEventFunction;
 }
 
-declare const CatButton: FC<CatButtonProps>;
+declare const CatButton: ComponentClass<CatButtonProps>;
 
 export default CatButton;
