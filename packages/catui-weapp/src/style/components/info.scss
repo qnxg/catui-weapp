@@ -1,6 +1,7 @@
 @import '../var.scss';
 
 .cat-info {
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   right: 0;
@@ -25,8 +26,8 @@
   &--dot {
     min-width: 0;
     border-radius: 100%;
-    width: $info-dot-size;
-    height: $info-dot-size;
+    min-width: $info-dot-size;
+    min-height: $info-dot-size;
     background-color: $info-dot-color;
   }
 }

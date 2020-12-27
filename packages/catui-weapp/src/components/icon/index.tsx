@@ -6,25 +6,24 @@ import CatInfo from '../info';
 import { addUnit } from '../../utils';
 import { CatIconProps } from '../../../types/icon';
 
-const CatIcon: React.FC<CatIconProps> = ({
-  customStyle,
-  className,
-  name,
-  dot,
-  info,
-  color,
-  size,
-  onClick
-}) => {
-  const isImage = name.indexOf('/') !== -1;
+export default class CatIcon extends React.PureComponent<CatIconProps> {
+  get isImage(): boolean {
+    return this.props.name.indexOf('/') !== -1;
+  }
 
-  const rootClass = classNames(
-    'cat-icon',
-    !isImage ? `cat-icon-${name}` : 'cat-icon--image',
-    className
-  );
+  get rootClass(): string {
+    const { name, className } = this.props;
 
-  const rootStyle = (() => {
+    return classNames(
+      'cat-icon',
+      !this.isImage ? `cat-icon-${name}` : 'cat-icon--image',
+      className
+    );
+  }
+
+  get rootStyle(): string | React.CSSProperties {
+    const { customStyle, color, size } = this.props;
+
     if (typeof customStyle === 'string') {
       return [
         customStyle,
@@ -38,18 +37,20 @@ const CatIcon: React.FC<CatIconProps> = ({
     }
 
     return { ...customStyle, color: color, fontSize: size };
-  })();
+  }
 
-  return (
-    <View style={rootStyle} onClick={onClick} className={rootClass}>
-      {info || dot ? (
-        <CatInfo dot={dot} info={'' + info} className='cat-icon__info' />
-      ) : null}
-      {isImage ? (
-        <Image src={name} mode='aspectFit' className='cat-icon__image' />
-      ) : null}
-    </View>
-  );
-};
+  render(): JSX.Element {
+    const { onClick, info, dot, name } = this.props;
 
-export default CatIcon;
+    return (
+      <View style={this.rootStyle} onClick={onClick} className={this.rootClass}>
+        {info || dot ? (
+          <CatInfo dot={dot} info={'' + info} className='cat-icon__info' />
+        ) : null}
+        {this.isImage ? (
+          <Image src={name} mode='aspectFit' className='cat-icon__image' />
+        ) : null}
+      </View>
+    );
+  }
+}

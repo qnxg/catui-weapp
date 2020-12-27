@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { ComponentClass } from 'react';
 import { CatComponent } from './base';
 
 export interface CatIconProps extends CatComponent {
@@ -34,6 +34,6 @@ export interface CatIconProps extends CatComponent {
   onClick?: () => void;
 }
 
-declare const CatIcon: FC<CatIconProps>;
+declare const CatIcon: ComponentClass<CatIconProps>;
 
 export default CatIcon;
