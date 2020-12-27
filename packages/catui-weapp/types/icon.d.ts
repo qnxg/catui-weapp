@@ -1,4 +1,5 @@
 import { ComponentClass } from 'react';
+import { CommonEventFunction } from '@tarojs/components/types/common';
 import { CatComponent } from './base';
 
 export interface CatIconProps extends CatComponent {
@@ -31,7 +32,7 @@ export interface CatIconProps extends CatComponent {
   /**
    * 点击图标时触发
    */
-  onClick?: () => void;
+  onClick?: CommonEventFunction;
 }
 
 declare const CatIcon: ComponentClass<CatIconProps>;
