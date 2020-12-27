@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View } from '@tarojs/components';
 import { CatIcon } from 'catui-weapp';
 
@@ -21,6 +21,15 @@ const Index: React.FC = () => {
         <CatIcon className='demo-icon' name='chat-o' dot />
         <CatIcon className='demo-icon' name='chat-o' info='9' />
         <CatIcon className='demo-icon' name='chat-o' info='99+' />
+      </ShowArea>
+      <ShowArea title='图标颜色' padding>
+        <CatIcon className='demo-icon' name='chat-o' color='#1989fa' />
+        <CatIcon className='demo-icon' name='chat-o' color='#ee0a24' />
+      </ShowArea>
+
+      <ShowArea title='图标大小' padding>
+        <CatIcon className='demo-icon' name='chat-o' size={25} />
+        <CatIcon className='demo-icon' name='chat-o' size='25px' />
       </ShowArea>
     </View>
   );

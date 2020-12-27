@@ -10,7 +10,7 @@ const CatInfo: React.FC<CatInfoProps> = ({
   className,
   customStyle
 }) => {
-  const rootClass = classNames('cat-info', 'cat-info--dot', className);
+  const rootClass = classNames('cat-info', { 'cat-info--dot': dot }, className);
 
   return (
     <React.Fragment>

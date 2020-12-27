@@ -31,6 +31,7 @@
   },
   "scripts": {
     "dev": "npm run dev:lib",
+    "dev:rollup": "rollup --config rollup.config.js -w",
     "dev:lib": "tsc --project ./tsconfig.build.json --watch --incremental",
     "build": "npm run build:rollup && npm run build:lib",
     "build:lib": "tsc --project ./tsconfig.build.json",
