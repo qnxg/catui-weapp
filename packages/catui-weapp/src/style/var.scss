@@ -22,6 +22,15 @@ $green: #07c160 !default;
 $gradient-red: linear-gradient(to right, #ff6034, #ee0a24) !default;
 $gradient-orange: linear-gradient(to right, #ffd01e, #ff8917) !default;
 
+// Component Colors
+$text-color: $gray-8 !default;
+$active-color: $gray-2 !default;
+$active-opacity: 0.7 !default;
+$disabled-opacity: 0.5 !default;
+$background-color: $gray-1 !default;
+$background-color-light: #fafafa !default;
+$text-link-color: #576b95 !default;
+
 // Padding
 $padding-base: 4px * $hd !default;
 $padding-xs: $padding-base * 2 !default;
@@ -46,6 +55,18 @@ $base-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
 $price-integer-font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial,
   sans-serif !default;
 
+// Animation
+$animation-duration-base: 0.3s !default;
+$animation-duration-fast: 0.2s !default;
+
+// Border
+$border-color: $gray-3 !default;
+$border-width-base: 1px * $hd !default;
+$border-radius-sm: 2px * $hd !default;
+$border-radius-md: 4px * $hd !default;
+$border-radius-lg: 8px * $hd !default;
+$border-radius-max: 999px * $hd !default;
+
 // loading
 $loading-spinner-color: $gray-5 !default;
 $loading-spinner-size: 30px * $hd !default;
@@ -65,3 +86,36 @@ $info-background-color: $red !default;
 $info-dot-color: $red !default;
 $info-dot-size: 8px * $hd !default;
 $info-font-family: -apple-system-font, Helvetica Neue, Arial, sans-serif !default;
+
+// Button
+$button-mini-height: 22px * $hd !default;
+$button-mini-min-width: 50px * $hd !default;
+$button-mini-font-size: $font-size-xs !default;
+$button-small-height: 30px * $hd !default;
+$button-small-font-size: $font-size-sm !default;
+$button-small-min-width: 60px * $hd !default;
+$button-normal-font-size: $font-size-md !default;
+$button-large-height: 50px * $hd !default;
+$button-default-color: $text-color !default;
+$button-default-height: 44px * $hd !default;
+$button-default-font-size: $font-size-lg !default;
+$button-default-background-color: $white !default;
+$button-default-border-color: $border-color !default;
+$button-primary-color: $white !default;
+$button-primary-background-color: $green !default;
+$button-primary-border-color: $green !default;
+$button-info-color: $white !default;
+$button-info-background-color: $blue !default;
+$button-info-border-color: $blue !default;
+$button-danger-color: $white !default;
+$button-danger-background-color: $red !default;
+$button-danger-border-color: $red !default;
+$button-warning-color: $white !default;
+$button-warning-background-color: $orange !default;
+$button-warning-border-color: $orange !default;
+$button-line-height: 20px * $hd !default;
+$button-border-width: 1px * $hd !default;
+$button-border-radius: $border-radius-sm !default;
+$button-round-border-radius: $border-radius-max !default;
+$button-plain-background-color: $white !default;
+$button-disabled-opacity: $disabled-opacity !default;

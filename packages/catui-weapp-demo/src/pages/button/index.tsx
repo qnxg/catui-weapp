@@ -4,6 +4,7 @@ import { CatButton } from 'catui-weapp';
 
 import ShowArea from '../../components/showArea';
 
+import 'catui-weapp/dist/style/components/button.scss';
 import './index.scss';
 
 const Index: React.FC = () => {
@@ -12,7 +13,6 @@ const Index: React.FC = () => {
       <ShowArea title='按钮类型' padding>
         {/* <Button>ff</Button> */}
         <CatButton>4545</CatButton>
-        <View>fdsfs</View>
       </ShowArea>
     </View>
   );

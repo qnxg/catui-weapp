@@ -14,7 +14,8 @@ export default class CatButton extends React.PureComponent<CatButtonProps> {
       loadingType,
       loadingText,
       icon,
-      children
+      children,
+      type = 'default'
     } = this.props;
 
     let mainContent = (
@@ -47,7 +48,7 @@ export default class CatButton extends React.PureComponent<CatButtonProps> {
       );
     }
 
-    const rootClass = classNames('cat-button');
+    const rootClass = classNames('cat-button', `cat-button--${type}`);
 
     return (
       <React.Fragment>
