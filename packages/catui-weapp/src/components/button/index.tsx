@@ -9,13 +9,16 @@ import { CatButtonProps } from '../../../types/button';
 export default class CatButton extends React.PureComponent<CatButtonProps> {
   render(): JSX.Element {
     const {
+      className,
       loading,
       loadingSize,
       loadingType,
       loadingText,
       icon,
+      plain,
       children,
-      type = 'default'
+      type = 'default',
+      size = 'normal'
     } = this.props;
 
     let mainContent = (
@@ -48,11 +51,22 @@ export default class CatButton extends React.PureComponent<CatButtonProps> {
       );
     }
 
-    const rootClass = classNames('cat-button', `cat-button--${type}`);
+    const rootClass = classNames(
+      'cat-button',
+      `cat-button--${type}`,
+      `cat-button--${size}`,
+      { 'cat-button--plain': plain },
+      className
+    );
 
     return (
       <React.Fragment>
-        <Button className={rootClass}>{mainContent}</Button>
+        <Button
+          className={rootClass}
+          hoverClass='cat-button--active hover-class'
+        >
+          {mainContent}
+        </Button>
       </React.Fragment>
     );
   }

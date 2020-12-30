@@ -72,7 +72,7 @@ export interface CatButtonProps extends CatComponent, TaroButtonProps {
    * 是否可用
    * @default false
    */
-  disables?: boolean;
+  disabled?: boolean;
 
   /**
    * 是否显示 loading

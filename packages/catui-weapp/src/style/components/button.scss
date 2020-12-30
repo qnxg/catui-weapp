@@ -39,9 +39,90 @@
     border-width: 0;
   }
 
+  &--active::before {
+    opacity: 0.15;
+  }
+
+  &--unclickable::after {
+    display: none;
+  }
+
   &--default {
     color: $button-default-color;
     background: $button-default-background-color;
     border: $button-border-width solid $button-default-border-color;
+  }
+
+  &--primary {
+    color: $button-primary-color;
+    background: $button-primary-background-color;
+    border: $button-border-width solid $button-primary-border-color;
+  }
+
+  &--info {
+    color: $button-info-color;
+    background: $button-info-background-color;
+    border: $button-border-width solid $button-info-border-color;
+  }
+
+  &--danger {
+    color: $button-danger-color;
+    background: $button-danger-background-color;
+    border: $button-border-width solid $button-danger-border-color;
+  }
+
+  &--warning {
+    color: $button-warning-color;
+    background: $button-warning-background-color;
+    border: $button-border-width solid $button-warning-border-color;
+  }
+
+  &--plain {
+    background: $button-plain-background-color;
+
+    &.cat-button--primary {
+      color: $button-primary-background-color;
+    }
+
+    &.cat-button--info {
+      color: $button-info-background-color;
+    }
+
+    &.cat-button--danger {
+      color: $button-danger-background-color;
+    }
+
+    &.cat-button--warning {
+      color: $button-warning-background-color;
+    }
+  }
+
+  &--normal {
+    padding: 0 17.5px * $hd;
+    font-size: $button-normal-font-size;
+  }
+
+  &--large {
+    width: 100%;
+    height: $button-large-height;
+  }
+
+  &--small {
+    min-width: $button-small-min-width;
+    height: $button-small-height;
+    padding: 0 $padding-xs;
+    font-size: $button-small-font-size;
+  }
+
+  // mini图标默认宽度50px，文字不能超过4个
+  &--mini {
+    display: inline-block;
+    min-width: $button-mini-min-width;
+    height: $button-mini-height;
+    font-size: $button-mini-font-size;
+
+    & + .cat-button--mini {
+      margin-left: 5px * $hd;
+    }
   }
 }
